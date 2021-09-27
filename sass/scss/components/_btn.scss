@@ -21,11 +21,14 @@
   .trackClose,
   .loginClose {
     display: none;
+    color: $color-lite;
+    background-color: $color-green;
   }
 
   .showX {
     display: block;
     font-size: 5rem;
+    background-color: $color-green;
   }
 }
 

@@ -48,6 +48,7 @@ body {
   width: 100%;
   height: calc(100vh - 25rem);
   position: relative;
+  overflow-x: hidden;
 }
 
 .jumbotron .swiper-container {
@@ -161,9 +162,10 @@ body {
 
 .jumbotron .swiper-container .swiper-button-prev,
 .jumbotron .swiper-container .swiper-button-next {
-  top: 55%;
+  display: none;
   width: 4rem;
   height: 8rem;
+  top: 55%;
   color: white;
   background-color: #088f5778;
 }
@@ -322,6 +324,14 @@ body {
   z-index: 100;
 }
 
+.login-box #login-link {
+  color: #088f57;
+  border: 0.1rem solid #088f57;
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: 0.2rem 0.2rem 0.3rem #7c7979;
+}
+
 .login-modal {
   width: 100vw;
   height: 100vh;
@@ -398,6 +408,14 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
+}
+
+.track-box #track-link {
+  color: #088f57;
+  border: 0.1rem solid #088f57;
+  background-color: transparent;
+  box-shadow: none;
+  text-shadow: 0.2rem 0.2rem 0.3rem #7c7979;
 }
 
 .track-modal {
@@ -518,11 +536,14 @@ hr {
 .btn .trackClose,
 .btn .loginClose {
   display: none;
+  color: white;
+  background-color: #088f57;
 }
 
 .btn .showX {
   display: block;
   font-size: 5rem;
+  background-color: #088f57;
 }
 
 .btnModalEffects {

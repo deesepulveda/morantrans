@@ -3,6 +3,14 @@
   height: 100%;
   @include flex-center;
   z-index: 100;
+
+  #login-link {
+    color: $color-green;
+    border: 0.1rem solid $color-green;
+    background-color: transparent;
+    box-shadow: none;
+    @include text-shadowgray;
+  }
 }
 
 .login-modal {

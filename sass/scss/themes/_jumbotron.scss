@@ -2,6 +2,7 @@
   width: 100%;
   height: calc(100vh - 25rem);
   position: relative;
+  overflow-x: hidden;
 
   .swiper-container {
     @include keep-it-hundo;
@@ -96,19 +97,12 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-      top: 55%;
+      display: none;
       width: 4rem;
       height: 8rem;
+      top: 55%;
       color: $color-lite;
       background-color: #088f5778;
     }
-
-    // .swiper-button-prev {
-    //   color: $color-lite;
-    // }
-
-    // .swiper-button-next {
-    //   color: $color-lite;
-    // }
   }
 }
