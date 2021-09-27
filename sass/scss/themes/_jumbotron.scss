@@ -1,6 +1,7 @@
 .jumbotron {
   width: 100%;
   height: calc(100vh - 25rem);
+  position: relative;
 
   .swiper-container {
     @include keep-it-hundo;
@@ -52,7 +53,7 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-      top: 55%;
+      top: 45%;
     }
 
     .swiper-button-prev {

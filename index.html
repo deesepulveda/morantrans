@@ -19,7 +19,70 @@
   </head>
   <body>
     <!------ HEADER ------>
-    <header class="header"></header>
+    <header class="header">
+      <!---- Logo ---->
+      <div class="logo-wrapper">
+        <a href="#">
+          <img
+            src="./public/images/Moran-TransCorp-Logo2.jpg"
+            alt=""
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <!------ Header Bottom ------>
+      <div class="logTrackBurger-container">
+        <!---- Login / Tracking ---->
+        <div class="log-track-wrapper">
+          <!--  -->
+          <div class="track-box" id="track-box">
+            <a href="#" class="btn track-link" id="track-link"
+              ><span class="tracktext" id="trackText">Track</span>
+              <span class="trackClose" id="trackClose">X</span></a
+            >
+          </div>
+          <div class="track-modal" id="track-modal">
+            <div class="account">Track Shipment</div>
+            <input
+              type="text"
+              id="tracking"
+              placeholder="Enter Tracking Number"
+              required=""
+            />
+          </div>
+          <!--  -->
+          <div class="login-box" id="login-box">
+            <a href="#" class="btn login-link" id="login-link"
+              ><span class="loginText" id="loginText">Login</span>
+              <span class="loginClose" id="loginClose">X</span></a
+            >
+          </div>
+          <div class="login-modal" id="login-modal">
+            <div class="account">Account Login</div>
+            <input
+              type="text"
+              id="userName"
+              placeholder="Username"
+              required=""
+            />
+            <input
+              type="text"
+              id="password"
+              placeholder="Password"
+              required=""
+            />
+          </div>
+        </div>
+        <!---- Burger ---->
+        <div class="burger" id="burger">
+          <div class="cheese">
+            <div class="top" id="top"></div>
+            <div class="meat" id="meat"></div>
+            <div class="bottom" id="bottom"></div>
+          </div>
+        </div>
+      </div>
+    </header>
     <!------ TITLE ------>
     <!--  -->
     <hr />
@@ -34,6 +97,7 @@
     </div>
     <!------ JUMBOTRON ------>
     <div class="jumbotron">
+      <!---- Slider Carousel ---->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <!--  -->

@@ -1,0 +1,50 @@
+.login-box {
+  width: calc(100% / 2);
+  height: 100%;
+  @include flex-center;
+  z-index: 100;
+}
+
+.login-modal {
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: relative;
+  color: $color-lite;
+  font-family: $primary-font;
+  font-size: 2rem;
+  @include absol-topLeftZero;
+  @include flex-center-col;
+  z-index: 95;
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  .account {
+    margin-bottom: 2rem;
+  }
+
+  input:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+}
+
+.showModal {
+  visibility: visible;
+}
+
+.btnMove {
+  position: absolute;
+  top: 25%;
+  right: 8%;
+}
+
+.indexMove {
+  z-index: 80;
+}

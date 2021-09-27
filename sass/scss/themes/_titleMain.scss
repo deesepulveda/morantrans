@@ -4,4 +4,5 @@
   padding: 1rem 2rem;
   text-transform: capitalize;
   text-align: justify;
+  @include text-shadowgray-lite;
 }

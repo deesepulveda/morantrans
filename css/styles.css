@@ -47,6 +47,7 @@ body {
 .jumbotron {
   width: 100%;
   height: calc(100vh - 25rem);
+  position: relative;
 }
 
 .jumbotron .swiper-container {
@@ -97,17 +98,17 @@ body {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   background-color: none;
-  border: 0.2rem solid #02ad19;
+  border: 0.2rem solid #088f57;
   opacity: 1;
 }
 
 .jumbotron .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #02ad19;
+  background-color: #088f57;
 }
 
 .jumbotron .swiper-container .swiper-button-prev,
 .jumbotron .swiper-container .swiper-button-next {
-  top: 55%;
+  top: 45%;
 }
 
 .jumbotron .swiper-container .swiper-button-prev {
@@ -118,9 +119,257 @@ body {
   color: white;
 }
 
+.burger {
+  width: 6rem;
+  height: 8rem;
+  position: absolute;
+  top: 48%;
+  left: 85%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  z-index: 90;
+}
+
+.burger .cheese {
+  width: 7rem;
+  height: 45%;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger .cheese .top,
+.burger .cheese .meat,
+.burger .cheese .bottom {
+  box-shadow: 0rem 0.2rem 0.5rem #7c7979;
+}
+
+.burger .cheese .top {
+  width: 100%;
+  height: 0.75rem;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #088f57;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  overflow: hidden;
+}
+
+.burger .cheese .meat {
+  width: 100%;
+  height: 0.75rem;
+  background-color: #088f57;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 834px) {
+  .burger .cheese .meat {
+    height: 1rem;
+  }
+}
+
+.burger .cheese .bottom {
+  width: 100%;
+  height: 0.75rem;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #088f57;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+
+.burger .cheese .topbun-change {
+  background-color: #088f57;
+  top: 50%;
+  transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  -moz-transform: rotate(-225deg);
+  -ms-transform: rotate(-225deg);
+  -o-transform: rotate(-225deg);
+}
+
+.burger .cheese .middle-change {
+  opacity: 0;
+}
+
+.burger .cheese .bottombun-change {
+  background-color: #088f57;
+  top: 50%;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+}
+
 .header {
   width: 100%;
   height: 15rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .logTrackBurger-container {
+  width: 100%;
+  height: calc(100% / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logTrackBurger-container .log-track-wrapper {
+  width: 65%;
+  height: 100%;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-box {
+  width: calc(100% / 2);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.login-modal {
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: relative;
+  color: white;
+  font-family: "century-gothicbold", sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 95;
+}
+
+.login-modal::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.login-modal .account {
+  margin-bottom: 2rem;
+}
+
+.login-modal input:nth-child(2) {
+  margin-bottom: 1rem;
+}
+
+.showModal {
+  visibility: visible;
+}
+
+.btnMove {
+  position: absolute;
+  top: 25%;
+  right: 8%;
+}
+
+.indexMove {
+  z-index: 80;
+}
+
+.track-box {
+  width: calc(100% / 2);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.track-modal {
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: relative;
+  color: white;
+  font-family: "century-gothicbold", sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 95;
+}
+
+.track-modal::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.showModal {
+  visibility: visible;
+}
+
+.indexMove {
+  z-index: 80;
 }
 
 .title-main {
@@ -129,12 +378,71 @@ body {
   padding: 1rem 2rem;
   text-transform: capitalize;
   text-align: justify;
+  text-shadow: 0.1rem 0.1rem 0.3rem #7c7979;
+}
+
+.logo-wrapper {
+  width: 90%;
+  height: calc(100% / 2);
+  margin: 0 auto;
+}
+
+.logo-wrapper .logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 hr {
   width: 90%;
   margin: 0 auto;
   border: none;
-  border-top: 0.2rem dotted #02ad19;
+  border-top: 0.2rem dotted #088f57;
+}
+
+.btn {
+  width: auto;
+  height: auto;
+  color: white;
+  text-decoration: none;
+  background-color: #088f57;
+  padding: 0.75rem 2rem;
+  font-size: 1.75rem;
+  font-family: "century-gothicbold", sans-serif;
+  box-shadow: 0rem 0.2rem 0.5rem #7c7979;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(8%);
+  -webkit-transform: translateY(8%);
+  -moz-transform: translateY(8%);
+  -ms-transform: translateY(8%);
+  -o-transform: translateY(8%);
+}
+
+.btn .trackClose,
+.btn .loginClose {
+  display: none;
+}
+
+.btn .showX {
+  display: block;
+  font-size: 5rem;
+}
+
+.btnModalEffects {
+  position: absolute;
+  top: 25%;
+  right: 8%;
+  box-shadow: none;
+}
+
+.loginTextClose {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,36 @@
+.track-box {
+  width: calc(100% / 2);
+  height: 100%;
+  @include flex-center;
+  z-index: 100;
+}
+
+.track-modal {
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  position: relative;
+  color: $color-lite;
+  font-family: $primary-font;
+  font-size: 2rem;
+  @include absol-topLeftZero;
+  @include flex-center-col;
+  z-index: 95;
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.9;
+    z-index: -1;
+  }
+}
+
+.showModal {
+  visibility: visible;
+}
+
+.indexMove {
+  z-index: 80;
+}
