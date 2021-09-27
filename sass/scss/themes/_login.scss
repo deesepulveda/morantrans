@@ -4,12 +4,28 @@
   @include flex-center;
   z-index: 100;
 
-  #login-link {
-    color: $color-green;
-    border: 0.1rem solid $color-green;
-    background-color: transparent;
-    box-shadow: none;
-    @include text-shadowgray;
+  .login-link {
+    width: auto;
+    height: auto;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 100%;
+      @include absol-topLeftZero;
+      background-color: $color-green;
+      z-index: -1;
+      overflow: hidden;
+      @include transit3;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover {
+      color: $color-lite;
+    }
   }
 }
 
@@ -47,7 +63,7 @@
     height: 3rem;
   }
 
-  .login-btn-box {
+  .modal-btn-box {
     width: 75%;
     height: auto;
     display: flex;

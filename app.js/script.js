@@ -44,7 +44,7 @@ loginLink.addEventListener("click", () => {
   loginLink.classList.toggle("btnModalEffects");
   trackBox.classList.toggle("indexMove");
   loginClose.classList.toggle("showX");
-  loginText.classList.toggle("loginTextClose");
+  loginText.classList.toggle("textClose");
 });
 
 trackLink.addEventListener("click", () => {
@@ -52,5 +52,5 @@ trackLink.addEventListener("click", () => {
   trackLink.classList.toggle("btnModalEffects");
   loginBox.classList.toggle("indexMove");
   trackClose.classList.toggle("showX");
-  trackText.classList.toggle("loginTextClose");
+  trackText.classList.toggle("textClose");
 });

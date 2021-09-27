@@ -1,0 +1,18 @@
+.btnFull {
+  width: auto;
+  height: auto;
+  position: relative;
+  color: $color-lite;
+  text-decoration: none;
+  background-color: $color-green;
+  padding: 0.75rem 2rem;
+  font-size: 1.75rem;
+  font-family: $primary-font;
+  @include deep-shadow-graylite;
+  @include transit2;
+
+  &:hover {
+    background-color: #09fd98;
+    color: $color-dark;
+  }
+}

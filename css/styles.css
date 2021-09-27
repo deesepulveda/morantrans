@@ -324,12 +324,34 @@ body {
   z-index: 100;
 }
 
-.login-box #login-link {
-  color: #088f57;
-  border: 0.1rem solid #088f57;
-  background-color: transparent;
-  box-shadow: none;
-  text-shadow: 0.2rem 0.2rem 0.3rem #7c7979;
+.login-box .login-link {
+  width: auto;
+  height: auto;
+}
+
+.login-box .login-link::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #088f57;
+  z-index: -1;
+  overflow: hidden;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.login-box .login-link:hover::after {
+  width: 100%;
+}
+
+.login-box .login-link:hover {
+  color: white;
 }
 
 .login-modal {
@@ -375,7 +397,7 @@ body {
   height: 3rem;
 }
 
-.login-modal .login-btn-box {
+.login-modal .modal-btn-box {
   width: 75%;
   height: auto;
   display: flex;
@@ -383,7 +405,7 @@ body {
   align-items: center;
 }
 
-.login-modal .login-btn-box .modal-btn {
+.login-modal .modal-btn-box .modal-btn {
   box-shadow: none;
 }
 
@@ -410,12 +432,34 @@ body {
   z-index: 100;
 }
 
-.track-box #track-link {
-  color: #088f57;
-  border: 0.1rem solid #088f57;
-  background-color: transparent;
-  box-shadow: none;
-  text-shadow: 0.2rem 0.2rem 0.3rem #7c7979;
+.track-box .track-link {
+  width: auto;
+  height: auto;
+}
+
+.track-box .track-link::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #088f57;
+  z-index: -1;
+  overflow: hidden;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.track-box .track-link:hover::after {
+  width: 100%;
+}
+
+.track-box .track-link:hover {
+  color: white;
 }
 
 .track-modal {
@@ -461,7 +505,7 @@ body {
   height: 3rem;
 }
 
-.track-modal .login-btn-box {
+.track-modal .modal-btn-box {
   width: 75%;
   height: auto;
   display: flex;
@@ -469,7 +513,7 @@ body {
   align-items: center;
 }
 
-.track-modal .login-btn-box .modal-btn {
+.track-modal .modal-btn-box .modal-btn {
   box-shadow: none;
 }
 
@@ -508,42 +552,28 @@ hr {
   border-top: 0.2rem dotted #088f57;
 }
 
-.btn {
+.btnBorder {
   width: auto;
   height: auto;
-  color: white;
+  position: relative;
+  color: #088f57;
   text-decoration: none;
-  background-color: #088f57;
   padding: 0.75rem 2rem;
   font-size: 1.75rem;
   font-family: "century-gothicbold", sans-serif;
-  box-shadow: 0rem 0.2rem 0.5rem #7c7979;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
+  border: 0.1rem solid #088f57;
 }
 
-.btn:hover {
-  transform: translateY(8%);
-  -webkit-transform: translateY(8%);
-  -moz-transform: translateY(8%);
-  -ms-transform: translateY(8%);
-  -o-transform: translateY(8%);
-}
-
-.btn .trackClose,
-.btn .loginClose {
+.btnBorder .trackClose,
+.btnBorder .loginClose {
   display: none;
   color: white;
-  background-color: #088f57;
 }
 
-.btn .showX {
+.btnBorder .showX {
   display: block;
   font-size: 5rem;
-  background-color: #088f57;
+  padding: 0.25rem;
 }
 
 .btnModalEffects {
@@ -551,9 +581,34 @@ hr {
   top: 25%;
   right: 8%;
   box-shadow: none;
+  border: none;
+  background-color: #088f57;
 }
 
-.loginTextClose {
+.textClose {
   display: none;
+}
+
+.btnFull {
+  width: auto;
+  height: auto;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  background-color: #088f57;
+  padding: 0.75rem 2rem;
+  font-size: 1.75rem;
+  font-family: "century-gothicbold", sans-serif;
+  box-shadow: 0rem 0.2rem 0.5rem #7c7979;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+}
+
+.btnFull:hover {
+  background-color: #09fd98;
+  color: #050505;
 }
 /*# sourceMappingURL=styles.css.map */

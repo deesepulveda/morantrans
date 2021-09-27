@@ -1,0 +1,37 @@
+.btnBorder {
+  width: auto;
+  height: auto;
+  position: relative;
+  color: $color-green;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.75rem;
+  font-family: $primary-font;
+  border: 0.1rem solid $color-green;
+  // @include transit3;
+
+  .trackClose,
+  .loginClose {
+    display: none;
+    color: $color-lite;
+  }
+
+  .showX {
+    display: block;
+    font-size: 5rem;
+    padding: 0.25rem;
+  }
+}
+
+.btnModalEffects {
+  position: absolute;
+  top: 25%;
+  right: 8%;
+  box-shadow: none;
+  border: none;
+  background-color: $color-green;
+}
+
+.textClose {
+  display: none;
+}
