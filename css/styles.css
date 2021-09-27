@@ -46,9 +46,9 @@ body {
 
 .jumbotron {
   width: 100%;
-  height: calc(100vh - 25rem);
+  height: 65vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .jumbotron .swiper-container {
@@ -123,9 +123,10 @@ body {
   border-bottom: 0.18rem dotted white;
 }
 
-.jumbotron .swiper-container .swiper-wrapper .swiper-slide .content-box h3 span {
+.jumbotron .swiper-container .swiper-wrapper .swiper-slide .content-box h3 .moran {
   color: #088f57;
   font-family: "century-gothicbold", sans-serif;
+  font-size: 3rem;
 }
 
 .jumbotron .swiper-container .swiper-wrapper .swiper-slide .content-box p {
@@ -170,11 +171,18 @@ body {
   background-color: #088f5778;
 }
 
+.space {
+  width: 100%;
+  height: 50rem;
+  background-color: aquamarine;
+}
+
 .burger {
   width: 6rem;
   height: 8rem;
+  position: relative;
   position: absolute;
-  top: 48%;
+  top: 9%;
   left: 85%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -189,6 +197,7 @@ body {
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
+  position: fixed;
   z-index: 90;
 }
 
@@ -265,7 +274,7 @@ body {
 }
 
 .burger .cheese .topbun-change {
-  background-color: #088f57;
+  background-color: #050505;
   top: 50%;
   transform: rotate(-225deg);
   -webkit-transform: rotate(-225deg);
@@ -279,7 +288,7 @@ body {
 }
 
 .burger .cheese .bottombun-change {
-  background-color: #088f57;
+  background-color: #050505;
   top: 50%;
   transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
@@ -288,9 +297,14 @@ body {
   -o-transform: rotate(225deg);
 }
 
+.sticky {
+  top: 0;
+  right: 0;
+}
+
 .header {
   width: 100%;
-  height: 15rem;
+  height: 20vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -423,6 +437,65 @@ body {
   z-index: 80;
 }
 
+.navbar {
+  width: 100vw;
+  height: calc(100vh - 20vh);
+  position: absolute;
+  top: 20%;
+  left: -100vw;
+  background-color: #088f57;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  position: fixed;
+  opacity: 0;
+  z-index: 90;
+}
+
+.navbar .navbar-ul {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navbar .navbar-ul .navbar-li {
+  width: 100%;
+  list-style-type: none;
+}
+
+.navbar .navbar-ul .navbar-li a {
+  width: auto;
+  text-decoration: none;
+  letter-spacing: 0.5rem;
+  color: white;
+  font-size: 3rem;
+  font-family: "century-gothicbold", sans-serif;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.navbar .navbar-ul .navbar-li a:hover {
+  letter-spacing: 1rem;
+  color: #050505;
+}
+
+.showNav {
+  opacity: 1;
+  transform: translateX(100vw);
+  -webkit-transform: translateX(100vw);
+  -moz-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  -o-transform: translateX(100vw);
+}
+
 .track-box {
   width: calc(100% / 2);
   height: 100%;
@@ -527,7 +600,7 @@ body {
 
 .title-main {
   width: 100%;
-  height: 10rem;
+  height: 15vh;
   padding: 1rem 2rem;
   text-transform: capitalize;
   text-align: justify;

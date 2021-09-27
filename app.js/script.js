@@ -13,10 +13,6 @@ const bottomBun = document.getElementById("bottom");
 
 function navOpen() {
   navBar.classList.toggle("showNav");
-  listOne.classList.toggle("slideLeft-One");
-  listTwo.classList.toggle("slideLeft-Two");
-  listThree.classList.toggle("slideLeft-Three");
-  listFour.classList.toggle("slideLeft-Four");
   topBun.classList.toggle("topbun-change"); //ROTATE TOP LINE
   meatBun.classList.toggle("middle-change"); //ROTATE MIDDLE LINE
   bottomBun.classList.toggle("bottombun-change"); //ROTATE BOTTOM LINE
@@ -25,6 +21,12 @@ function navOpen() {
 // CLICK TO SHOW NAV MENU AND ANIMATIONS ----
 
 burger.addEventListener("click", navOpen);
+
+// BURGER MENU MOVE ON SCROLL ----
+
+window.addEventListener("scroll", () => {
+  burger.classList.toggle("sticky", window.scrollY > 10);
+});
 
 // ------------------------------
 

@@ -1,12 +1,14 @@
 .burger {
   width: 6rem;
   height: 8rem;
+  position: relative;
   position: absolute;
-  top: 48%;
+  top: 9%;
   left: 85%;
   @include transformX;
   @include flex-center;
   @include transit3;
+  position: fixed;
   z-index: 90;
 
   .cheese {
@@ -64,7 +66,7 @@
     //**** JS CLICK EVENTS ****
 
     .topbun-change {
-      background-color: $color-green;
+      background-color: $color-dark;
       top: 50%;
       transform: rotate(-225deg);
       -webkit-transform: rotate(-225deg);
@@ -78,7 +80,7 @@
     }
 
     .bottombun-change {
-      background-color: $color-green;
+      background-color: $color-dark;
       top: 50%;
       transform: rotate(225deg);
       -webkit-transform: rotate(225deg);
@@ -87,4 +89,11 @@
       -o-transform: rotate(225deg);
     }
   }
+}
+
+//**** STICKY BURGER AFTER SCROLL ****
+
+.sticky {
+  top: 0;
+  right: 0;
 }
