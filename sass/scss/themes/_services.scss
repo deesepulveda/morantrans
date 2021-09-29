@@ -1,0 +1,34 @@
+.services {
+  height: 50rem;
+  border: 1px solid red;
+
+  .service-wrapper {
+    width: 100%;
+    height: auto;
+
+    .service-ul {
+      @include keep-it-hundo;
+      @include flex-center-col;
+
+      .service-box1,
+      .service-box2 {
+        // border: 1px solid green;
+        font-size: 1.5rem;
+        font-family: $tertiary-font;
+
+        .service-li {
+          width: 30rem;
+          list-style-type: none;
+          color: $color-lite;
+          @include flex-center;
+          padding: 1rem;
+          background-color: $color-green;
+
+          &:not(:last-child) {
+            margin: 1rem auto;
+          }
+        }
+      }
+    }
+  }
+}

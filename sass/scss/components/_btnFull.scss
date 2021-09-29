@@ -9,7 +9,7 @@
   font-size: 1.75rem;
   font-family: $primary-font;
   @include deep-shadow-graylite;
-  @include transit2;
+  // @include transit2;
 
   &:hover {
     background-color: #09fd98;

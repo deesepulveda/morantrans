@@ -25,7 +25,7 @@ burger.addEventListener("click", navOpen);
 // BURGER MENU MOVE ON SCROLL ----
 
 window.addEventListener("scroll", () => {
-  burger.classList.toggle("sticky", window.scrollY > 10);
+  burger.classList.toggle("sticky", window.scrollY > 100);
 });
 
 // ------------------------------
