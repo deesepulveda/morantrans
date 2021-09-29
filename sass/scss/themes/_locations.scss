@@ -1,0 +1,53 @@
+.locations {
+  height: auto;
+  margin: 2rem auto 4rem;
+
+  .location-ul {
+    @include keep-it-hundo;
+    @include flex-center-col;
+
+    .location-li {
+      width: 30rem;
+      position: relative;
+      list-style-type: none;
+      @include flex-center;
+      border: 0.1rem solid $color-green;
+      @include transit3;
+
+      &:not(:last-child) {
+        margin: 1rem auto;
+      }
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        @include absol-topLeftZero;
+        background-color: $color-green;
+        z-index: -1;
+        overflow: hidden;
+        @include transit3;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      .location-link {
+        @include keep-it-hundo;
+        padding: 1rem;
+        position: relative;
+        text-decoration: none;
+        font-family: $tertiary-font;
+        color: $color-green;
+        font-size: 1.75rem;
+        @include transit3;
+
+        &:hover {
+          color: $color-lite;
+          //   letter-spacing: 0.2rem;
+        }
+      }
+    }
+  }
+}

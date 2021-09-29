@@ -1,0 +1,102 @@
+.news {
+  height: 40rem;
+  margin-top: 2rem;
+  overflow-x: hidden;
+
+  .news-wrapper {
+    width: 100%;
+    height: auto;
+    @include flex-center-col;
+
+    .news-box1,
+    .news-box2 {
+      width: 100%;
+    }
+
+    .news-box1 {
+      height: 70%;
+      position: relative;
+
+      .swiper-container {
+        @include keep-it-hundo;
+
+        .swiper-wrapper {
+          @include keep-it-hundo;
+
+          .swiper-slide {
+            @include keep-it-hundo;
+            position: relative;
+
+            &::after {
+              content: "";
+              @include keep-it-hundo;
+              @include absol-topLeftZero;
+              background-color: $color-dark;
+              opacity: 0.8;
+            }
+
+            img {
+              @include keep-it-hundo;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .swiper-pagination {
+          width: 100%;
+          height: 2rem;
+          margin-bottom: 1rem;
+
+          .swiper-pagination-bullet {
+            width: 3rem;
+            height: 1rem;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            background-color: transparent;
+            border: 0.1rem solid $color-lite;
+            opacity: 1;
+          }
+
+          .swiper-pagination-bullet-active {
+            background-color: $color-lite;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          display: none;
+          width: 4rem;
+          height: 8rem;
+          top: 55%;
+          color: $color-lite;
+          background-color: #088f5778;
+        }
+      }
+    }
+
+    .news-box2 {
+      height: 30%;
+      margin-top: 2rem;
+
+      .fuel-title {
+        font-size: 1.75rem;
+        font-family: $tertiary-font;
+      }
+
+      .fuel-content {
+        width: 100%;
+        height: auto;
+
+        .fuel-li {
+          width: 100%;
+          height: auto;
+          font-size: 1.5rem;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+}

@@ -215,7 +215,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #088f57;
+  background-color: #050505;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -227,7 +227,7 @@ body {
 .burger .cheese .meat {
   width: 100%;
   height: 0.75rem;
-  background-color: #088f57;
+  background-color: #050505;
   overflow: hidden;
   position: relative;
   transition: 0.4s ease;
@@ -259,7 +259,7 @@ body {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: #088f57;
+  background-color: #050505;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -268,7 +268,7 @@ body {
 }
 
 .burger .cheese .topbun-change {
-  background-color: #050505;
+  background-color: red;
   top: 50%;
   transform: rotate(-225deg);
   -webkit-transform: rotate(-225deg);
@@ -282,7 +282,7 @@ body {
 }
 
 .burger .cheese .bottombun-change {
-  background-color: #050505;
+  background-color: red;
   top: 50%;
   transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
@@ -612,14 +612,204 @@ body {
   object-fit: contain;
 }
 
+.locations {
+  height: auto;
+  margin: 2rem auto 4rem;
+}
+
+.locations .location-ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.locations .location-ul .location-li {
+  width: 30rem;
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #088f57;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.locations .location-ul .location-li:not(:last-child) {
+  margin: 1rem auto;
+}
+
+.locations .location-ul .location-li::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #088f57;
+  z-index: -1;
+  overflow: hidden;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.locations .location-ul .location-li:hover::after {
+  width: 100%;
+}
+
+.locations .location-ul .location-li .location-link {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  font-family: "bahnschrift", sans-serif;
+  color: #088f57;
+  font-size: 1.75rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.locations .location-ul .location-li .location-link:hover {
+  color: white;
+}
+
+.news {
+  height: 40rem;
+  margin-top: 2rem;
+  overflow-x: hidden;
+}
+
+.news .news-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.news .news-wrapper .news-box1,
+.news .news-wrapper .news-box2 {
+  width: 100%;
+}
+
+.news .news-wrapper .news-box1 {
+  height: 70%;
+  position: relative;
+}
+
+.news .news-wrapper .news-box1 .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-wrapper .swiper-slide::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.8;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-pagination {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 3rem;
+  height: 1rem;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  background-color: transparent;
+  border: 0.1rem solid white;
+  opacity: 1;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-button-prev,
+.news .news-wrapper .news-box1 .swiper-container .swiper-button-next {
+  display: none;
+  width: 4rem;
+  height: 8rem;
+  top: 55%;
+  color: white;
+  background-color: #088f5778;
+}
+
+.news .news-wrapper .news-box2 {
+  height: 30%;
+  margin-top: 2rem;
+}
+
+.news .news-wrapper .news-box2 .fuel-title {
+  font-size: 1.75rem;
+  font-family: "bahnschrift", sans-serif;
+}
+
+.news .news-wrapper .news-box2 .fuel-content {
+  width: 100%;
+  height: auto;
+}
+
+.news .news-wrapper .news-box2 .fuel-content .fuel-li {
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  list-style-type: none;
+}
+
 .services {
-  height: 50rem;
-  border: 1px solid red;
+  height: auto;
+  margin: 2rem auto 4rem;
 }
 
 .services .service-wrapper {
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .services .service-wrapper .service-ul {
@@ -640,6 +830,7 @@ body {
 .services .service-wrapper .service-ul .service-box1 .service-li,
 .services .service-wrapper .service-ul .service-box2 .service-li {
   width: 30rem;
+  position: relative;
   list-style-type: none;
   color: white;
   display: flex;
@@ -657,7 +848,17 @@ body {
 .sections {
   width: 100%;
   max-width: 120rem;
-  margin: 0 auto;
+}
+
+.sitemap {
+  width: 100%;
+  height: 50rem;
+  background-color: #050505;
+}
+
+.reviews {
+  height: 50rem;
+  background: linear-gradient(to bottom, #088f57, #088f5700);
 }
 
 hr {
@@ -725,7 +926,7 @@ hr {
 .title-sections {
   width: 100%;
   height: auto;
-  margin: 2rem auto;
+  padding: 2rem;
   font-size: 2.5rem;
   font-family: "century-gothicbold", sans-serif;
   color: #050505;
