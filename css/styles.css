@@ -434,10 +434,10 @@ body {
 .navbar {
   width: 100vw;
   height: calc(100vh - 20vh);
+  position: relative;
   position: absolute;
   top: 20%;
   left: -100vw;
-  background-color: #088f57;
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
@@ -446,6 +446,18 @@ body {
   position: fixed;
   opacity: 0;
   z-index: 90;
+}
+
+.navbar::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.95;
+  z-index: -1;
 }
 
 .navbar .navbar-ul {
@@ -478,7 +490,7 @@ body {
 
 .navbar .navbar-ul .navbar-li a:hover {
   letter-spacing: 1rem;
-  color: #050505;
+  color: #088f57;
 }
 
 .showNav {

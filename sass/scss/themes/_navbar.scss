@@ -1,14 +1,24 @@
 .navbar {
   width: 100vw;
   height: calc(100vh - 20vh);
+  position: relative;
   position: absolute;
   top: 20%;
   left: -100vw;
-  background-color: $color-green;
+  // background-color: $color-dark;
   @include transit3;
   position: fixed;
   opacity: 0;
   z-index: 90;
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.95;
+    z-index: -1;
+  }
 
   .navbar-ul {
     width: 100%;
@@ -31,7 +41,7 @@
 
         &:hover {
           letter-spacing: 1rem;
-          color: $color-dark;
+          color: $color-green;
         }
       }
     }
