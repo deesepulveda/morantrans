@@ -10,10 +10,10 @@
     .news-box1,
     .news-box2 {
       width: 100%;
+      height: calc(100% / 2);
     }
 
     .news-box1 {
-      height: calc(100% / 2);
       position: relative;
 
       .swiper-container {
@@ -37,6 +37,22 @@
             img {
               @include keep-it-hundo;
               object-fit: cover;
+            }
+
+            .news-link-box {
+              width: 100%;
+              height: auto;
+              @include flex-center;
+              @include absol-topLeftZero;
+              z-index: 10;
+
+              .news-link {
+                @include keep-it-hundo;
+                text-decoration: none;
+                color: $color-lite;
+                font-size: 2rem;
+                font-family: $tertiary-font;
+              }
             }
           }
         }
@@ -77,7 +93,6 @@
     }
 
     .news-box2 {
-      height: calc(100% / 2);
       padding-top: 5rem;
       @include flex-center-col;
 

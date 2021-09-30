@@ -715,10 +715,10 @@ body {
 .news .news-wrapper .news-box1,
 .news .news-wrapper .news-box2 {
   width: 100%;
+  height: calc(100% / 2);
 }
 
 .news .news-wrapper .news-box1 {
-  height: calc(100% / 2);
   position: relative;
 }
 
@@ -755,6 +755,27 @@ body {
   object-fit: cover;
 }
 
+.news .news-wrapper .news-box1 .swiper-container .swiper-wrapper .swiper-slide .news-link-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.news .news-wrapper .news-box1 .swiper-container .swiper-wrapper .swiper-slide .news-link-box .news-link {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-family: "bahnschrift", sans-serif;
+}
+
 .news .news-wrapper .news-box1 .swiper-container .swiper-pagination {
   width: 100%;
   height: 2rem;
@@ -789,7 +810,6 @@ body {
 }
 
 .news .news-wrapper .news-box2 {
-  height: calc(100% / 2);
   padding-top: 5rem;
   display: flex;
   justify-content: center;
@@ -867,7 +887,7 @@ body {
 
 .sitemap {
   width: 100%;
-  height: 50rem;
+  height: 30rem;
   padding-top: 4rem;
   background-color: #050505;
 }
@@ -879,6 +899,52 @@ body {
   color: white;
   font-family: "bahnschrift", sans-serif;
   font-size: 1.75rem;
+}
+
+.sitemap .site-links-wrapper {
+  width: 100%;
+  height: auto;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sitemap .site-links-wrapper .site-box1,
+.sitemap .site-links-wrapper .site-box2,
+.sitemap .site-links-wrapper .site-box3 {
+  width: auto;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.sitemap .site-links-wrapper .site-box1 li,
+.sitemap .site-links-wrapper .site-box2 li,
+.sitemap .site-links-wrapper .site-box3 li {
+  width: auto;
+  list-style-type: none;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.sitemap .site-links-wrapper .site-box1 li a,
+.sitemap .site-links-wrapper .site-box2 li a,
+.sitemap .site-links-wrapper .site-box3 li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.15rem;
+  font-family: "bahnschrift", sans-serif;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.sitemap .site-links-wrapper .site-box1 li a:hover,
+.sitemap .site-links-wrapper .site-box2 li a:hover,
+.sitemap .site-links-wrapper .site-box3 li a:hover {
+  color: #088f57;
 }
 
 .reviews {
