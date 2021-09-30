@@ -5,6 +5,7 @@
 
   .news-wrapper {
     width: 100%;
+    height: auto;
     @include flex-center-col;
 
     .news-box1,
@@ -42,6 +43,7 @@
             .news-link-box {
               width: 100%;
               height: auto;
+              margin-top: 3rem;
               @include flex-center;
               @include absol-topLeftZero;
               z-index: 10;
@@ -93,7 +95,7 @@
     }
 
     .news-box2 {
-      padding-top: 5rem;
+      padding-top: 4rem;
       @include flex-center-col;
 
       .fuel-title {

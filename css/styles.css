@@ -706,6 +706,7 @@ body {
 
 .news .news-wrapper {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -758,6 +759,7 @@ body {
 .news .news-wrapper .news-box1 .swiper-container .swiper-wrapper .swiper-slide .news-link-box {
   width: 100%;
   height: auto;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -810,7 +812,7 @@ body {
 }
 
 .news .news-wrapper .news-box2 {
-  padding-top: 5rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
