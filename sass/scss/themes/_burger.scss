@@ -21,6 +21,7 @@
     .meat,
     .bottom {
       @include deep-shadow-graylite;
+      // border: 0.1rem solid $color-green;
     }
 
     .top {
@@ -66,7 +67,7 @@
     //**** JS CLICK EVENTS ****
 
     .topbun-change {
-      background-color: red;
+      background-color: $color-dark;
       top: 50%;
       transform: rotate(-225deg);
       -webkit-transform: rotate(-225deg);
@@ -80,7 +81,7 @@
     }
 
     .bottombun-change {
-      background-color: red;
+      background-color: $color-dark;
       top: 50%;
       transform: rotate(225deg);
       -webkit-transform: rotate(225deg);
