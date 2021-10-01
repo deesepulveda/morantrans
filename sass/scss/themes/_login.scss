@@ -27,6 +27,12 @@
       color: $color-lite;
     }
   }
+
+  .trackLinkFixed {
+    position: fixed;
+    top: 2%;
+    right: 5%;
+  }
 }
 
 .login-modal {
@@ -40,6 +46,7 @@
   @include absol-topLeftZero;
   @include flex-center-col;
   z-index: 95;
+  position: fixed;
 
   &::after {
     content: "";

@@ -362,6 +362,12 @@ body {
   color: white;
 }
 
+.login-box .trackLinkFixed {
+  position: fixed;
+  top: 2%;
+  right: 5%;
+}
+
 .login-modal {
   width: 100vw;
   height: 100vh;
@@ -378,6 +384,7 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: 95;
+  position: fixed;
 }
 
 .login-modal::after {
@@ -541,6 +548,12 @@ body {
   color: white;
 }
 
+.track-box .trackLinkFixed {
+  position: fixed;
+  top: 2%;
+  right: 5%;
+}
+
 .track-modal {
   width: 100vw;
   height: 100vh;
@@ -557,6 +570,7 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: 95;
+  position: fixed;
 }
 
 .track-modal::after {

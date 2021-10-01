@@ -44,6 +44,7 @@ const loginClose = document.getElementById("loginClose");
 loginLink.addEventListener("click", () => {
   loginModal.classList.toggle("showModal");
   loginLink.classList.toggle("btnModalEffects");
+  loginLink.classList.toggle("trackLinkFixed");
   trackBox.classList.toggle("indexMove");
   loginClose.classList.toggle("showX");
   loginText.classList.toggle("textClose");
@@ -52,6 +53,7 @@ loginLink.addEventListener("click", () => {
 trackLink.addEventListener("click", () => {
   trackModal.classList.toggle("showModal");
   trackLink.classList.toggle("btnModalEffects");
+  trackLink.classList.toggle("trackLinkFixed");
   loginBox.classList.toggle("indexMove");
   trackClose.classList.toggle("showX");
   trackText.classList.toggle("textClose");
