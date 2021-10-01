@@ -176,7 +176,7 @@ body {
   height: 8rem;
   position: relative;
   position: absolute;
-  top: 9%;
+  top: 9.5%;
   left: 85%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -215,7 +215,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #050505;
+  background-color: #088f57;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -227,7 +227,7 @@ body {
 .burger .cheese .meat {
   width: 100%;
   height: 0.75rem;
-  background-color: #050505;
+  background-color: #088f57;
   overflow: hidden;
   position: relative;
   transition: 0.4s ease;
@@ -259,7 +259,7 @@ body {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: #050505;
+  background-color: #088f57;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
   -moz-transition: 0.4s ease;
@@ -268,7 +268,7 @@ body {
 }
 
 .burger .cheese .topbun-change {
-  background-color: #050505;
+  background-color: #088f57;
   top: 50%;
   transform: rotate(-225deg);
   -webkit-transform: rotate(-225deg);
@@ -282,7 +282,7 @@ body {
 }
 
 .burger .cheese .bottombun-change {
-  background-color: #050505;
+  background-color: #088f57;
   top: 50%;
   transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
@@ -469,8 +469,10 @@ body {
 
 .navbar .navbar-ul {
   width: 100%;
-  height: 100%;
+  height: 60%;
+  margin-top: 4rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
@@ -640,7 +642,7 @@ body {
 
 .locations {
   height: auto;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 8rem;
 }
 
 .locations .location-ul {
@@ -852,7 +854,7 @@ body {
 
 .services {
   height: auto;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 8rem;
 }
 
 .services .service-wrapper {
@@ -964,8 +966,102 @@ body {
 }
 
 .reviews {
-  height: 50rem;
-  background: linear-gradient(to bottom, #088f57, #088f5700);
+  height: auto;
+  position: relative;
+}
+
+.reviews::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../public/images/GeneralShippersMap.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+.reviews .bg-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.reviews .title-reviews {
+  color: white;
+  text-shadow: 0.3rem 0.3rem 0.7rem #050505;
+  margin-bottom: 2rem;
+}
+
+.reviews .review-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reviews .review-wrapper .review-box {
+  width: 25rem;
+  height: 30rem;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+  border-top: 0.3rem solid #088f57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reviews .review-wrapper .review-box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.reviews .review-wrapper .review-box .review-img-box {
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+}
+
+.reviews .review-wrapper .review-box .review-img-box .review-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews .review-wrapper .review-box .quotes {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.reviews .review-wrapper .review-box .reviewer {
+  font-size: 1.15rem;
 }
 
 footer {

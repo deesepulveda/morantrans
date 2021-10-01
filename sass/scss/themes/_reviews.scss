@@ -1,4 +1,81 @@
 .reviews {
-  height: 50rem;
-  background: linear-gradient(to bottom, $color-green, #088f5700);
+  height: auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-image: url(../public/images/GeneralShippersMap.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -2;
+  }
+
+  .bg-overlay {
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  .title-reviews {
+    color: $color-lite;
+    @include text-shadowdeep;
+    margin-bottom: 2rem;
+  }
+
+  .review-wrapper {
+    @include keep-it-hundo;
+    @include flex-center-col;
+
+    .review-box {
+      width: 25rem;
+      height: 30rem;
+      margin-bottom: 3rem;
+      padding: 1rem 2rem;
+      color: $color-lite;
+      position: relative;
+      border-top: 0.3rem solid $color-green;
+      @include flex-center-col;
+
+      &::after {
+        content: "";
+        @include keep-it-hundo;
+        @include absol-topLeftZero;
+        background-color: $color-dark;
+        opacity: 0.8;
+        z-index: -1;
+      }
+
+      .review-img-box {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        overflow: hidden;
+
+        .review-img {
+          @include keep-it-hundo;
+          object-fit: cover;
+        }
+      }
+
+      .quotes {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .reviewer {
+        font-size: 1.15rem;
+      }
+    }
+  }
 }
