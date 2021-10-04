@@ -101,10 +101,10 @@ body {
   width: auto;
   height: auto;
   margin-top: 5rem;
+  margin-bottom: 1rem;
   padding: 0 1rem;
   position: relative;
   font-size: 2.25rem;
-  margin-bottom: 1rem;
 }
 
 .jumbotron .swiper-container .swiper-wrapper .swiper-slide .content-box h3::after {
@@ -884,18 +884,95 @@ body {
 .services .service-wrapper .service-ul .service-box2 .service-li {
   width: 30rem;
   position: relative;
+  padding: 1rem;
   list-style-type: none;
   color: white;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
   background-color: #088f57;
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
 }
 
 .services .service-wrapper .service-ul .service-box1 .service-li:not(:last-child),
 .services .service-wrapper .service-ul .service-box2 .service-li:not(:last-child) {
   margin: 1rem auto;
+}
+
+.slideLeft-One {
+  animation: cardSlide 0.6s linear 0.4s both;
+  -webkit-animation: cardSlide 0.6s linear 0.4s both;
+}
+
+/*********/
+.slideLeft-Two {
+  animation: cardSlide 0.6s linear 0.8s both;
+  -webkit-animation: cardSlide 0.6s linear 0.8s both;
+}
+
+/*********/
+.slideLeft-Three {
+  animation: cardSlide 0.6s linear 1.2s both;
+  -webkit-animation: cardSlide 0.6s linear 1.2s both;
+}
+
+/*********/
+.slideLeft-Four {
+  animation: cardSlide 0.6s linear 1.6s both;
+  -webkit-animation: cardSlide 0.6s linear 1.6s both;
+}
+
+/*********/
+.slideLeft-Five {
+  animation: cardSlide 0.6s linear 2s both;
+  -webkit-animation: cardSlide 0.6s linear 2s both;
+}
+
+/*********/
+.slideLeft-Six {
+  animation: cardSlide 0.6s linear 2.4s both;
+  -webkit-animation: cardSlide 0.6s linear 2.4s both;
+}
+
+/*********/
+.slideLeft-Seven {
+  animation: cardSlide 0.6s linear 2.8s both;
+  -webkit-animation: cardSlide 0.6s linear 2.8s both;
+}
+
+/*********/
+.slideLeft-Eight {
+  animation: cardSlide 0.6s linear 3.2s both;
+  -webkit-animation: cardSlide 0.6s linear 3.2s both;
+}
+
+@keyframes cardSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0vw);
+    -webkit-transform: translateX(0vw);
+    -moz-transform: translateX(0vw);
+    -ms-transform: translateX(0vw);
+    -o-transform: translateX(0vw);
+  }
 }
 
 .sections {

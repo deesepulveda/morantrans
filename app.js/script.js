@@ -8,6 +8,7 @@ const burger = document.getElementById("burger");
 const topBun = document.getElementById("top");
 const meatBun = document.getElementById("meat");
 const bottomBun = document.getElementById("bottom");
+const jumboTron = document.getElementById("jumbotron");
 
 // ------------------------------
 
@@ -41,6 +42,8 @@ const loginText = document.getElementById("loginText");
 const trackClose = document.getElementById("trackClose");
 const loginClose = document.getElementById("loginClose");
 
+// TRACKING / LOGIN BUTTONS ----
+
 loginLink.addEventListener("click", () => {
   loginModal.classList.toggle("showModal");
   loginLink.classList.toggle("btnModalEffects");
@@ -57,4 +60,43 @@ trackLink.addEventListener("click", () => {
   loginBox.classList.toggle("indexMove");
   trackClose.classList.toggle("showX");
   trackText.classList.toggle("textClose");
+});
+
+// ------------------------------
+
+const liOne = document.getElementById("li-one");
+const liTwo = document.getElementById("li-two");
+const liThree = document.getElementById("li-three");
+const liFour = document.getElementById("li-four");
+const liFive = document.getElementById("li-five");
+const liSix = document.getElementById("li-six");
+const liSeven = document.getElementById("li-seven");
+const liEight = document.getElementById("li-eight");
+
+// SERVICE CARDS SLIDE IN ----
+
+window.addEventListener("scroll", () => {
+  liOne.classList.add("slideLeft-One", window.scrollY > jumboTron.scrollHeight);
+  liTwo.classList.add("slideLeft-Two", window.scrollY > jumboTron.scrollHeight);
+  liThree.classList.add(
+    "slideLeft-Three",
+    window.scrollY > jumboTron.scrollHeight
+  );
+  liFour.classList.add(
+    "slideLeft-Four",
+    window.scrollY > jumboTron.scrollHeight
+  );
+  liFive.classList.add(
+    "slideLeft-Five",
+    window.scrollY > jumboTron.scrollHeight
+  );
+  liSix.classList.add("slideLeft-Six", window.scrollY > jumboTron.scrollHeight);
+  liSeven.classList.add(
+    "slideLeft-Seven",
+    window.scrollY > jumboTron.scrollHeight
+  );
+  liEight.classList.add(
+    "slideLeft-Eight",
+    window.scrollY > jumboTron.scrollHeight
+  );
 });
